@@ -8,12 +8,23 @@ html {
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 30px;
+	font-size: 35px;
+	color: #dfdfdf;
+	background-color: #3a3f3f;
 }
 
 #calculator {
 	display: flex;
 	flex-direction: column;
+	width: 450px;
+	margin: auto;
+	border: 2px solid #000;
+}
+
+.screen {
+	font-family: monospace;
+	color:#131414;
+	background-color: #878d8d;
 }
 
 .buttons {
@@ -21,6 +32,10 @@ body {
 }
 
 button {
+	font-size: 40px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #131414;
 	width: 100px;
 	height: 50px;
 }
