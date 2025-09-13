@@ -49,7 +49,14 @@ function operate(operator, a, b) {
 bttnsNumbers.forEach((button) => {
 	button.addEventListener("click", () => {
 		if(!newNumberOnScreen){
-			displayNumber += button.textContent;
+			// Check if already has a dot
+			if(button.textContent === "."){
+				if(!(displayNumber.includes(".")) ) {
+				displayNumber += button.textContent;
+				}
+			} else {
+				displayNumber += button.textContent;
+			}
 		} else {
 			displayNumber = button.textContent;
 			newNumberOnScreen = false;
@@ -61,6 +68,8 @@ bttnsNumbers.forEach((button) => {
 // Clear Screen
 bttnClear.addEventListener("click", () =>{
 	displayNumber = "";
+	firstNumber = NaN;
+	secondNumber = NaN;
 	calculatorScreen.textContent = "0";
 });
 
