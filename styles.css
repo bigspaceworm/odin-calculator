@@ -18,17 +18,25 @@ body {
 	flex-direction: column;
 	width: 450px;
 	margin: auto;
+	gap: 5px;
 	border: 2px solid #000;
 }
 
 .screen {
 	font-family: monospace;
+	text-align: right;
 	color:#131414;
 	background-color: #878d8d;
 }
 
+.topButtons {
+	display: flex;
+	justify-content: space-between;
+}
+
 .buttons {
 	display: flex;
+	justify-content: space-between;
 }
 
 button {
@@ -43,6 +51,8 @@ button {
 .numbers {
 	display: flex;
 	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: space-between;
 	width: 300px;
 }
 

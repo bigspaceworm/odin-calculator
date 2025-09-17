@@ -10,6 +10,7 @@ const calculatorScreen = document.querySelector(".screen");
 const bttnsNumbers = document.querySelector(".numbers").querySelectorAll("button");
 const bttnClear = document.querySelector("#clear");
 const bttnsOperations = document.querySelector(".operations").querySelectorAll("button");
+const bttnBackspace = document.querySelector("#backspace");
 
 function add(a, b) {
 	return a + b;
@@ -71,6 +72,16 @@ bttnClear.addEventListener("click", () =>{
 	firstNumber = NaN;
 	secondNumber = NaN;
 	calculatorScreen.textContent = "0";
+});
+
+bttnBackspace.addEventListener("click", () =>{
+	if(displayNumber.length > 1){
+		displayNumber = displayNumber.slice(0, displayNumber.length - 1);
+		calculatorScreen.textContent = displayNumber;
+	} else {
+		displayNumber = "0";
+		calculatorScreen.textContent = 0;
+	}
 });
 
 bttnsOperations.forEach((button) => {
